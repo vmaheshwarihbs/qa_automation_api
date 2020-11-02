@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/roles/",
+		"personId": "949467"
+	},
+  "TC002": {
+    "endpoint": "/alumniProfileService/external/rest/roles/",
+    "personId": "wwdd"
+  },
+	"TC003": {
+		"endpoint": "/alumniProfileService/external/rest/roles/",
+		"personId": "949467"
+	}
+}

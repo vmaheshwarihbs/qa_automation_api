@@ -1,0 +1,22 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/sys/logback/reload",
+		"personId": "949467"
+	},
+	"TC002": {
+		"endpoint": "/tmt/sys/logback/reload",
+		"personId": "abc"
+	},
+	"TC003": {
+		"endpoint": "/tmt/sys/logback/reload",
+		"personId": "949467"
+	},
+	"TC004": {
+		"endpoint": "/tmt/sys/logback/reload",
+		"personId": "949467"
+	},
+	"TC005": {
+		"endpoint": "/tmt/sys/logback/reloadinvalid",
+		"personId": "949467"
+	}
+}

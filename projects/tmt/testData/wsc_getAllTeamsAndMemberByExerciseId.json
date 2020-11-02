@@ -1,0 +1,22 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/rest/internal/getAllTeamsAndMembersByExerciseId/602432",
+		"personId": "949467"
+	},
+	"TC002": {
+		"endpoint": "/tmt/rest/internal/getAllTeamsAndMembersByExerciseId/34343333434343434",
+		"personId": "abc"
+	},
+	"TC003": {
+		"endpoint": "/tmt/rest/internal/getAllTeamsAndMembersByExerciseId/602432",
+		"personId": "949467"
+	},
+	"TC004": {
+		"endpoint": "/tmt/rest/internal/getAllTeamsAndMembersByExerciseId/602432",
+		"personId": "949467"
+	},
+	"TC005": {
+		"endpoint": "/tmt/rest/internal/getAllTeamsAndMembersByExerciseIdinvalid/602432",
+		"personId": "949467"
+	}
+}

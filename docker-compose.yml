@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  integration-test:
+    image: node
+    environment:
+      - NODE_ENV=alumniTest
+    volumes:
+      - ./:/AlumniProfileService
+    working_dir: /AlumniProfileService
+    command: ["npm", "run", "alumniTest"]

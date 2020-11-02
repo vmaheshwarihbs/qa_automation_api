@@ -1,0 +1,22 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/rest/facstaff/getAllExercises",
+		"personId": "949467"
+	},
+	"TC002": {
+		"endpoint": "/tmt/rest/facstaff/getAllExercises",
+		"personId": "zwzw949467"
+	},
+	"TC003": {
+		"endpoint": "/tmt/rest/facstaff/getAllExercises",
+		"personId": "949467"
+	},
+	"TC004": {
+		"endpoint": "/tmt/rest/facstaff/getAllExercises",
+		"personId": "949467"
+	},
+	"TC005": {
+		"endpoint": "/tmt/rest/facstaff/getAllExercisesinvalid",
+		"personId": "949467"
+	}
+}

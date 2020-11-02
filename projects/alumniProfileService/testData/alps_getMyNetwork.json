@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/alum/myNetwork",
+		"personId": "1040701"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/external/rest/alum/myNetworknjn",
+		"personId": "1040701"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/external/rest/alum/myNetwork",
+		"personId": "1040701"
+	}
+}

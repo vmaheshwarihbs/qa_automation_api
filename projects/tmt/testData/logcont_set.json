@@ -1,0 +1,6 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/sys/logback/set",
+		"personId": "949467"
+	}
+}

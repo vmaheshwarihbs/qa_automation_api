@@ -1,0 +1,5 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/disableLogin"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/setRequirePasswordChange"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/setRequirePasswordChange"
+	}
+}

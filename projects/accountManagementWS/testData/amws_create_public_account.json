@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/createPublicAccount"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/createPublicAccount"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/createPublicAccount"
+		}
+
+}

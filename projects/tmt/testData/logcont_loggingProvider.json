@@ -1,0 +1,6 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/sys/logging/provider",
+		"personId": "949467"
+	}
+}  

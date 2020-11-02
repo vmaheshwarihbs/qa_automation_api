@@ -1,0 +1,10 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/alum/update/addressSeasonal/clear/7248057",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/external/rest/alum/update/addressSeasonal/clear/7248057",
+		"personId":"323232643589"
+	}
+}

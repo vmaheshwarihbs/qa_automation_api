@@ -1,0 +1,22 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/sys/logback/list",
+		"personId": "949467"
+	},
+	"TC002": {
+		"endpoint": "/tmt/sys/logback/list",
+		"personId": "abc"
+	},
+	"TC003": {
+		"endpoint": "/tmt/sys/logback/list",
+		"personId": "949467"
+	},
+	"TC004": {
+		"endpoint": "/tmt/sys/logback/list",
+		"personId": "949467"
+	},
+	"TC005": {
+		"endpoint": "/tmt/sys/logback/listinvalid",
+		"personId": "949467"
+	}
+}
