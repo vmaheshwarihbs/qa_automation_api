@@ -8,7 +8,7 @@
     "fs": "0.0.1-security",
     "joi-machine": "^3.0.0",
     "nodemailer": "^6.4.13",
-    "oracledb": "^5.0.0",
+    "oracledb": "github:oracle/node-oracledb",
     "winston": "^3.3.3",
     "xml2js": "^0.4.23"
   },
@@ -25,7 +25,6 @@
     "test": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/tmt --testPathPattern=./projects/tmt --config ./jest-conf.js",
     "testamws": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/accountManagementWS --testPathPattern=./projects/accountManagementWS --config ./jest-conf.js",
     "testalps": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/alumniProfileService --testPathPattern=./projects/alumniProfileService --config ./jest-conf.js"
-
   },
   "author": "HBS",
   "license": "ISC"
