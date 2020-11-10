@@ -1,26 +1,26 @@
 let connection;
 var oracledb = require('oracledb');
 
-(async function() {
+(async function dbconn() {
 try{
    connection = await oracledb.getConnection({
 
-      user          : process.env.NODE_ORACLEDB_USER,
+      user          : 'tmt_usr',
 
-      password      : process.env.NODE_ORACLEDB_PASSWORD,
+      password      : text,
 
-      connectString : process.env.NODE_ORACLEDB_CONNECTIONSTRING
+      connectString : '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = odahbsstg-scan.hbs.edu)(PORT = 4756))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = ORAENTC.HBS.EDU)))'
 
    });
-
+   // $2b$10$v93rMcb20KkA7ka7KpVB0uEL5iIYMi1YBTQcsHUzxylbk5NLDd62u
    console.log(connection.oracleServerVersion);
 
 
-   connection.close();
 
 } catch(err) {
     console.log("Error: ", err);
-  } finally {
+  }
+  finally {
     if (connection) {
       try {
         await connection.close();
