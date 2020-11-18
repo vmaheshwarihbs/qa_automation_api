@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/rest/alum/update/",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/rest/alum/update/",
+		"personId":"ewwew643589"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/rest/alum/update/",
+		"personId":"643589"
+	}
+}

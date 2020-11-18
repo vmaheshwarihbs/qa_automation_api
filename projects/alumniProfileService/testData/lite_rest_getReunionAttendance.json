@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/rest/alum/lite/reunionAttendance?degreeCode=MBA&class=2019",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/rest/alum/lite/reunionAttendance?degreeCode=MBA&class=2019",
+		"personId":"wqq643589"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/rest/alum/lite/reunionAttendance?degreeCode=MBA&class=2019",
+		"personId":"643589"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/rest/alum/reunionAlum/643589",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/rest/alum/reunionAlum/2323323643589",
+		"personId":"643589"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/rest/alum/reunionAlum/643589",
+		"personId":"643589"
+	}
+}
