@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/alum",
+		"personId": "869840"
+	},
+	"TC002": {
+			"endpoint": "/alumniProfileService/external/rest/alum/lite/alum",
+			"personId": "asasas949467"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/alum",
+		"personId": "869840"
+	}
+}

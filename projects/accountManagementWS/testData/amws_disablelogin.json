@@ -1,5 +1,13 @@
 {
 	"TC001": {
 		"endpoint": "/accountManagementWS/person/disableLogin"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/disableLogin"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/disableLogin"
 	}
 }

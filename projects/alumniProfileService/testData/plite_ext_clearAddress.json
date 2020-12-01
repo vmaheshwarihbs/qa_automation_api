@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/update/address/clear/5222945/H",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/update/address/clear/5222945/",
+		"personId":"dede643589"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/update/address/clear/5222945/H",
+		"personId":"643589"
+	}
+}

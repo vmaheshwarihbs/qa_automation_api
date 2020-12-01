@@ -1,0 +1,13 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/accountExists"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/accountExists"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/accountExists"
+	}
+}

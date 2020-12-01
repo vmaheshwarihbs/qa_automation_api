@@ -1,0 +1,6 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/alum/alum/outreachReport",
+		"personId":"643589"
+	}
+}

@@ -9,6 +9,11 @@
 
 	"TC003": {
 		"endpoint": "/accountManagementSearchWS/person/search"
+	},
+
+	"TC004": {
+		"endpoint": "/accountManagementSearchWS/person/search"
 	}
+
 
 }

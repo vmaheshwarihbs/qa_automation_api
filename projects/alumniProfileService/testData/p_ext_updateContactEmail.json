@@ -1,0 +1,6 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/alum/update/contactEmail",
+		"personId":"643589"
+	}
+}

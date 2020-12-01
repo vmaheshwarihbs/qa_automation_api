@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/findADDisabledAccountDetail/860876"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/findADDisabledAccountDetail/cc860876"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/findADDisabledAccountDetail/860876"
+		}
+
+}

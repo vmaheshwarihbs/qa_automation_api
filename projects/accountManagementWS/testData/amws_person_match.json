@@ -1,5 +1,11 @@
 {
 	"TC001": {
 		"endpoint": "/accountManagementWS/person/match"
+	},
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/match"
+	},
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/match"
 	}
 }

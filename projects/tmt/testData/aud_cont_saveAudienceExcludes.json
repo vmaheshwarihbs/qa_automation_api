@@ -1,0 +1,26 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
+		"personId": "949467"
+	},
+	"TC002": {
+		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
+		"personId": "w3e949467"
+	},
+	"TC003": {
+		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
+		"personId": "949467"
+	},
+	"TC004": {
+		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
+		"personId": "949467"
+	},
+	"TC005": {
+		"endpoint": "/tmt/rest/admin/audience/602432/excludes/addinvalid",
+		"personId": "949467"
+	},
+	"TC006": {
+		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
+		"personId": "949467"
+		}
+}

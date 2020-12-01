@@ -1,0 +1,18 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/setMFAO365Flag"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/setMFAO365Flag"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/setMFAO365Flag"
+  },
+
+  "TC004": {
+    "endpoint": "/accountManagementWS/person/setMFAO365Flag"
+    }
+
+}

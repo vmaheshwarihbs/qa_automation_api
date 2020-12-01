@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/lite/update/address/clear/7248057/LF",
+		"personId":"643589"
+	},
+  "TC002": {
+    "endpoint": "/alumniProfileService/internal/rest/alum/lite/update/address/clear/7248057/LF",
+    "personId":"643583349"
+  },
+	"TC003": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/lite/update/address/clear/7248057/LF",
+		"personId":"643589"
+	}
+}

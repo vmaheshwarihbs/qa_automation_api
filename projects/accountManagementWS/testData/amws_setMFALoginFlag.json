@@ -1,0 +1,18 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/setMFALoginFlag"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/setMFALoginFlag"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/setMFALoginFlag"
+  },
+
+  "TC004": {
+    "endpoint": "/accountManagementWS/person/setMFALoginFlag"
+    }
+
+}

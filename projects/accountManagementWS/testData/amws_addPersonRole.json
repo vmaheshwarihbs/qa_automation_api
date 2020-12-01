@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/addPersonRole"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/addPersonRole"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/addPersonRole"
+		}
+
+}

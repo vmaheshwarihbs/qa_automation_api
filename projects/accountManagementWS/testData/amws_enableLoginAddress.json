@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/enableLoginAddress"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/enableLoginAddress"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/enableLoginAddress"
+		}
+
+}

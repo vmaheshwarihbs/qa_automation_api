@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/update/interest/clear/123",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/update/interest/clear/1",
+		"personId":"ewee643589"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/update/interest/clear/123",
+		"personId":"643589"
+	}
+}

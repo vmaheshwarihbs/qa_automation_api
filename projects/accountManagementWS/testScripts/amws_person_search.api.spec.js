@@ -14,15 +14,14 @@ describe('AWMS- Person Search', () => {
     it('TC-001 - personsearch - should return a person with 200 status code', (done) => {
         request.post(data.TC001.endpoint)
             .send({"personId" : "890876"})
-            // .set("HBS_PERSON_ID", data.TC001.personId)
             .set("Content-Type", "application/json")
             .set("accept", "application/json")
             .end((err, res) => {
                 if (err) done.fail(err);
                 expect(res.status).toBe(200);
                 expect(Object.keys(res.body).length).toBeGreaterThan(0);
-                logger.info("TC-001 -alumni_allEvents - Request: ", res.request); //Logging request
-                logger.info("TC-001 -alumni_allEvents - Response: ", res.text); // Logging response
+                logger.info("TC-001 -personsearch - Request: ", res.request); //Logging request
+                logger.info("TC-001 -personsearch - Response: ", res.text); // Logging response
                 done();
             });
     });
@@ -35,8 +34,8 @@ describe('AWMS- Person Search', () => {
             .end((err, res) => {
                 if (err) done.fail(err);
                 expect(res.status).toBe(400);
-                logger.info("TC-001 -alumni_allEvents - Request: ", res.request); //Logging request
-                logger.info("TC-001 -alumni_allEvents - Response: ", res.text); // Logging response
+                logger.info("TC-001 -personsearch - Request: ", res.request); //Logging request
+                logger.info("TC-001 -personsearch - Response: ", res.text); // Logging response
                 done();
             });
     });
@@ -49,8 +48,22 @@ describe('AWMS- Person Search', () => {
             .end((err, res) => {
                 if (err) done.fail(err);
                 expect(res.type).toEqual('application/json');
-                logger.info("TC-003 -alumni_allEvents - Request: ", res.request); //Logging request
-                logger.info("TC-003 -alumni_allEvents - Response: ", res.text); // Logging response
+                logger.info("TC-003 -personsearch - Request: ", res.request); //Logging request
+                logger.info("TC-003 -personsearch - Response: ", res.text); // Logging response
+                done();
+            });
+    });
+    it('TC-004 - personsearch - should return a person with 200 status code', (done) => {
+        request.post(data.TC001.endpoint)
+            .send({ "username" : "kjohnmicheal@hbsstg.org" })
+            .set("Content-Type", "application/json")
+            .set("accept", "application/json")
+            .end((err, res) => {
+                if (err) done.fail(err);
+                expect(res.status).toBe(200);
+                expect(Object.keys(res.body).length).toBeGreaterThan(0);
+                logger.info("TC-001 -personsearch - Request: ", res.request); //Logging request
+                logger.info("TC-001 -personsearch - Response: ", res.text); // Logging response
                 done();
             });
     });

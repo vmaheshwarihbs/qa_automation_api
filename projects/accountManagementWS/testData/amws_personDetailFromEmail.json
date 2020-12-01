@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/accountManagementWS/person/personDetailFromEmail"
+	},
+
+	"TC002": {
+		"endpoint": "/accountManagementWS/person/personDetailFromEmail"
+	},
+
+	"TC003": {
+		"endpoint": "/accountManagementWS/person/personDetailFromEmail"
+		}
+
+}

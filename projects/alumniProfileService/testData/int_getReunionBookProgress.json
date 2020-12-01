@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/reunionBookProgress?degreeCode=MBA&class=2019",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/reunionBookProgress?degreeCode=MBA",
+		"personId":"643589"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/reunionBookProgress?degreeCode=MBA&class=2019",
+		"personId":"643589"
+	}
+}

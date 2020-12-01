@@ -1,0 +1,26 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/rest/person/949467/courseGroups",
+		"personId": "949467"
+	},
+	"TC002": {
+		"endpoint": "/tmt/rest/person/949467/courseGroups",
+		"personId": "w3e949467"
+	},
+	"TC003": {
+		"endpoint": "/tmt/rest/person/949467/courseGroups",
+		"personId": "949467"
+	},
+	"TC004": {
+		"endpoint": "/tmt/rest/person/949467/courseGroups",
+		"personId": "949467"
+	},
+	"TC005": {
+		"endpoint": "/tmt/rest/person/949467/courseGroupsinvalid",
+		"personId": "949467"
+	},
+	"TC006": {
+		"endpoint": "/tmt/rest/person/949467/courseGroups",
+		"personId": "949467"
+		}
+}

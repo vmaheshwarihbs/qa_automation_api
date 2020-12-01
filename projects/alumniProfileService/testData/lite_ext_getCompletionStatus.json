@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/completionStatus",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/completionStatus",
+		"personId":"e3e3e643589"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/external/rest/alum/lite/completionStatus",
+		"personId":"643589"
+	}
+}

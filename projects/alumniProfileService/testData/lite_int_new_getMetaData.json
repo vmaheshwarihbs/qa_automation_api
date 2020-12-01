@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/lite/updateMetadata",
+		"personId":"643589"
+	},
+	"TC002": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/lite/updateMetadatazs",
+		"personId":"ddd"
+	},
+	"TC003": {
+		"endpoint": "/alumniProfileService/internal/rest/alum/lite/updateMetadata",
+		"personId":"643589"
+	}
+}
