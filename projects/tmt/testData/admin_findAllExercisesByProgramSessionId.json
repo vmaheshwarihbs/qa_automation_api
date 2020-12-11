@@ -1,0 +1,26 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/rest/admin/findAllExercisesByProgramSessionId/539712",
+		"personId": "12962"
+	},
+	"TC002": {
+		"endpoint": "/tmt/rest/admin/findAllExercisesByProgramSessionId/539712",
+		"personId": "w3e12962"
+	},
+	"TC003": {
+		"endpoint": "/tmt/rest/admin/findAllExercisesByProgramSessionId/539712",
+		"personId": "12962"
+	},
+	"TC004": {
+		"endpoint": "/tmt/rest/admin/findAllExercisesByProgramSessionId/539712",
+		"personId": "12962"
+	},
+	"TC005": {
+		"endpoint": "/tmt/rest/admin/findAllExercisesByProgramSessionIdinvalid/539712",
+		"personId": "12962"
+	},
+	"TC006": {
+		"endpoint": "/tmt/rest/admin/findAllExercisesByProgramSessionId/539712",
+		"personId": "12962"
+	}
+}

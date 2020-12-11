@@ -11,9 +11,9 @@ jest.setTimeout(100000);
 
 
 
-describe('GET_List', () => {
+describe('GET_loggingProvider', () => {
 
-    it('TC-001 - LoggingProvider - should return status of logging provider with 200 status code', (done) => {
+    it('TC-001 - loggingProvider - should return status of logging provider with 200 status code', (done) => {
         request.get(data.TC001.endpoint)
             .set("HBS_PERSON_ID", data.TC001.personId)
             .set("Content-Type", "application/json")
@@ -22,8 +22,8 @@ describe('GET_List', () => {
                 if (err) done.fail(err);
                 expect(res.status).toBe(200);
                 expect(Object.keys(res.body).length).toBeGreaterThan(0);
-                logger.info("TC-001 -alumni_allEvents - Request: ", res.request); //Logging request
-                logger.info("TC-001 -alumni_allEvents - Response: ", res.text); // Logging response
+                logger.info("TC-001 -loggingProvider - Request: ", res.request); //Logging request
+                logger.info("TC-001 -loggingProvider - Response: ", res.text); // Logging response
                 done();
             });
     });

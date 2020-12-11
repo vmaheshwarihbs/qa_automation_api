@@ -1,0 +1,14 @@
+{
+	"TC001": {
+		"endpoint": "/tmt/rest/admin/audience/3628/group/615862/remove",
+		"personId": "12962"
+	},
+	"TC002": {
+		"endpoint": "/tmt/rest/admin/audience/3628/group/615862/remove",
+		"personId": "zs12962"
+	},
+	"TC003": {
+		"endpoint": "/tmt/rest/admin/audience/3628/group/615862/remove",
+		"personId": "12962"
+	}
+}

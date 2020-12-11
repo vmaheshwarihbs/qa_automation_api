@@ -27,7 +27,11 @@
     "test": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/tmt --testPathPattern=./projects/tmt --config ./jest-conf.js",
     "testamws": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/accountManagementWS --testPathPattern=./projects/accountManagementWS --config ./jest-conf.js",
     "testalps": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/alumniProfileService --testPathPattern=./projects/alumniProfileService --config ./jest-conf.js",
-    "test1": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/testapp --testPathPattern=./projects/testapp --config ./jest-conf.js"
+    "test1": "set NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/testapp --testPathPattern=./projects/testapp --config ./jest-conf.js",
+    "test-macalps": "export NODE_ENV=secure_stage_hbsstg&& jest --roots ./projects/alumniProfileService --testPathPattern=./projects/alumniProfileService --config ./jest-conf.js",
+    "test-mactmt": "export NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/tmt --testPathPattern=./projects/tmt --config ./jest-conf.js",
+    "test-macamws": "export NODE_ENV=secure_stage_hbsstg& jest --roots ./projects/accountManagementWS --testPathPattern=./projects/accountManagementWS --config ./jest-conf.js"
+
   },
   "author": "HBS",
   "license": "ISC"

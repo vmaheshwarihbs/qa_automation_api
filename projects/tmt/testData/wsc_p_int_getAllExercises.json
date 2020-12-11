@@ -18,5 +18,9 @@
 	"TC005": {
 		"endpoint": "/tmt/rest/facstaff/getAllExercisesinvalid",
 		"personId": "949467"
+	},
+	"TC006": {
+		"endpoint": "/tmt/rest/internal/getAllExercises",
+		"personId": "949467"
 	}
 }

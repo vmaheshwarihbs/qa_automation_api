@@ -13,7 +13,7 @@ jest.setTimeout(100000);
 
 describe('GET_isCourseLevelAdmin', () => {
 
-    it('TC-001 - is Course Level Admin - should return is course level admin with 200 status code', (done) => {
+    it('TC-001 - isCourseLevelAdmin - should return is course level admin with 200 status code', (done) => {
         request.get(data.TC001.endpoint)
             .set("HBS_PERSON_ID", data.TC001.personId)
             .set("Content-Type", "application/json")
@@ -22,8 +22,59 @@ describe('GET_isCourseLevelAdmin', () => {
                 if (err) done.fail(err);
                 expect(res.status).toBe(200);
                 expect(Object.keys(res.body).length).toBeGreaterThan(0);
-                logger.info("TC-001 -is Course Level Admin - Request: ", res.request); //Logging request
-                logger.info("TC-001 -is Course Level Admin - Response: ", res.text); // Logging response
+                logger.info("TC-001 -isCourseLevelAdmin - Request: ", res.request); //Logging request
+                logger.info("TC-001 -isCourseLevelAdmin - Response: ", res.text); // Logging response
+                done();
+            });
+    });
+    it('TC-002 - isCourseLevelAdmin - should not is course level admin with 403 status code', (done) => {
+        request.get(data.TC002.endpoint)
+            .set("HBS_PERSON_ID", data.TC002.personId)
+            .set("Content-Type", "application/json")
+            .set("accept", "application/json")
+            .end((err, res) => {
+                if (err) done.fail(err);
+                expect(res.status).toBe(403);
+                logger.info("TC-001 -isCourseLevelAdmin - Request: ", res.request); //Logging request
+                logger.info("TC-001 -isCourseLevelAdmin - Response: ", res.text); // Logging response
+                done();
+            });
+    });
+    it('TC-003 - isCourseLevelAdmin - should return correct content-type and schema in JSON format', (done) => {
+        request.get(data.TC003.endpoint)
+            .set("HBS_PERSON_ID", data.TC003.personId)
+            .set("Content-Type", "application/json")
+            .set("accept", "application/json")
+            .end((err, res) => {
+                if (err) done.fail(err);
+                expect(res.type).toEqual('application/json');
+                logger.info("TC-003 -isCourseLevelAdmin - Request: ", res.request); //Logging request
+                logger.info("TC-003 -isCourseLevelAdmin - Response: ", res.text); // Logging response
+                done();
+            });
+    });
+    it('TC-004 - isCourseLevelAdmin - should return the response in sepecified time', (done) => {
+        request.get(data.TC004.endpoint)
+            .set("HBS_PERSON_ID", data.TC004.personId)
+            .set("Content-Type", "application/json")
+            .end((err, res) => {
+                if (err) done.fail(err);
+                jest.setTimeout(10000);
+                logger.info("TC-004 -isCourseLevelAdmin - Request: ", res.request); //Logging request
+                logger.info("TC-004 -isCourseLevelAdmin - Response: ", res.text); // Logging response
+                done();
+            });
+    });
+    it('TC-005 - isCourseLevelAdmin - should return status code 404 for access denied', (done) => {
+        request.get(data.TC005.endpoint)
+            .set("HBS_PERSON_ID", data.TC005.personId)
+            .set("Content-Type", "application/json")
+            .set("accept", "application/json")
+            .end((err, res) => {
+                if (err) done.fail(err);
+                expect(res.status).toBe(404);
+                logger.info("TC-006 -isCourseLevelAdmin - Request: ", res.request); //Logging request
+                logger.info("TC-006 -isCourseLevelAdmin - Response: ", res.text); // Logging response
                 done();
             });
     });

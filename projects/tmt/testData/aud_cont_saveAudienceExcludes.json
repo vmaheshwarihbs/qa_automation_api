@@ -1,26 +1,26 @@
 {
 	"TC001": {
-		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
-		"personId": "949467"
+		"endpoint": "/tmt/rest/admin/audience/762037/excludes/add?excludeEmails=sputta%40hbsstg.org",
+		"personId": "12962"
 	},
 	"TC002": {
-		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
+		"endpoint": "/tmt/rest/admin/audience/762037/excludes/add?excludeEmails=sputta%40hbsstg.org",
 		"personId": "w3e949467"
 	},
 	"TC003": {
-		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
-		"personId": "949467"
+		"endpoint": "/tmt/rest/admin/audience/762037/excludes/add?excludeEmails=sputta%40hbsstg.org",
+		"personId": "12962"
 	},
 	"TC004": {
-		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
-		"personId": "949467"
+		"endpoint": "/tmt/rest/admin/audience/762037/excludes/add?excludeEmails=sputta%40hbsstg.org",
+		"personId": "12962"
 	},
 	"TC005": {
-		"endpoint": "/tmt/rest/admin/audience/602432/excludes/addinvalid",
-		"personId": "949467"
+		"endpoint": "/tmt/rest/admin/audience/762037/excludes/addinvalid?excludeEmails=sputta%40hbsstg.org",
+		"personId": "12962"
 	},
 	"TC006": {
-		"endpoint": "/tmt/rest/admin/audience/602432/excludes/add",
-		"personId": "949467"
+		"endpoint": "/tmt/rest/admin/audience/762037/excludes/add?excludeEmails=sputta%40hbsstg.org",
+		"personId": "12962"
 		}
 }
