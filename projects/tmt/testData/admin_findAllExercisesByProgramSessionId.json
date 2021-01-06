@@ -4,7 +4,7 @@
 		"personId": "12962"
 	},
 	"TC002": {
-		"endpoint": "/TestApp/rest/admin/findAllExercisesByProgramSessionId/539712",
+		"endpoint": "/tmt/rest/admin/findAllExercisesByProgramSessionId/539712",
 		"personId": "w3e12962"
 	},
 	"TC003": {
