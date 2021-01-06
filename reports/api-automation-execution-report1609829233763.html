@@ -1,0 +1,453 @@
+<html><head><meta charset="utf-8"/><title>Test Report</title><style type="text/css">html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+body {
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+#jesthtml-content {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+#title {
+  margin: 0;
+  flex-grow: 1;
+}
+#logo {
+  height: 4rem;
+}
+#timestamp {
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/** SUMMARY */
+#summary {
+  color: #333;
+  margin: 2rem 0;
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#summary > div {
+  margin-right: 2rem;
+  background: #eee;
+  padding: 1rem;
+  min-width: 15rem;
+}
+#summary > div:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 720px) {
+  #summary {
+    flex-direction: column;
+  }
+  #summary > div {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+  #summary > div:first-child {
+    margin-top: 0;
+  }
+}
+
+.summary-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.summary-passed {
+  color: #4f8a10;
+  border-left: 0.4rem solid #4f8a10;
+  padding-left: 0.5rem;
+}
+.summary-failed,
+.summary-obsolete-snapshots {
+  color: #d8000c;
+  border-left: 0.4rem solid #d8000c;
+  padding-left: 0.5rem;
+}
+.summary-pending {
+  color: #9f6000;
+  border-left: 0.4rem solid #9f6000;
+  padding-left: 0.5rem;
+}
+.summary-empty {
+  color: #999;
+  border-left: 0.4rem solid #999;
+}
+
+.test-result {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+.test-result:last-child {
+  border: 0;
+}
+.test-result.passed {
+  background-color: #dff2bf;
+  color: #4f8a10;
+}
+.test-result.failed {
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.test-result.pending {
+  background-color: #ffdf61;
+  color: #9f6000;
+}
+
+.test-info {
+  display: flex;
+  justify-content: space-between;
+}
+.test-suitename {
+  width: 20%;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-word;
+}
+.test-title {
+  width: 40%;
+  text-align: left;
+  font-style: italic;
+}
+.test-status {
+  width: 20%;
+  text-align: right;
+}
+.test-duration {
+  width: 10%;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.failureMessages {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  border-top: 1px dashed #d8000c;
+}
+.failureMessages.suiteFailure {
+  border-top: none;
+}
+.failureMsg {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.suite-container {
+  margin-bottom: 2rem;
+}
+.suite-info {
+  padding: 1rem;
+  background-color: #eee;
+  color: #777;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.suite-info .suite-path {
+  word-break: break-all;
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.suite-info .suite-time {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+}
+.suite-info .suite-time.warn {
+  background-color: #d8000c;
+  color: #fff;
+}
+
+/* CONSOLE LOGS */
+.suite-consolelog {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #efefef;
+}
+.suite-consolelog-header {
+  font-weight: bold;
+}
+.suite-consolelog-item {
+  padding: 0.5rem;
+}
+.suite-consolelog-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-consolelog-item-origin {
+  color: #777;
+  font-weight: bold;
+}
+.suite-consolelog-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* OBSOLETE SNAPSHOTS */
+.suite-obsolete-snapshots {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.suite-obsolete-snapshots-header {
+  font-weight: bold;
+}
+.suite-obsolete-snapshots-item {
+  padding: 0.5rem;
+}
+.suite-obsolete-snapshots-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-obsolete-snapshots-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+</style></head><body><div id="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 05-01-2021 12:17:15</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (30)</div><div class="summary-passed">16 passed</div><div class="summary-failed">14 failed</div><div class="summary-pending summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (127)</div><div class="summary-passed">110 passed</div><div class="summary-failed">17 failed</div><div class="summary-pending summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_getCourseGroups.api.spec.js</div><div class="suite-time warn">8.159s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">getCourseGroups</div><div class="test-title">TC-001 - get Course Groups - should return Course Groups 200 status code</div><div class="test-status">passed</div><div class="test-duration">1.735s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">getCourseGroups</div><div class="test-title">TC-002 - get Course Groups - should not return Course Groups with 403 status code</div><div class="test-status">failed</div><div class="test-duration">1.144s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 403
+Received: 200
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\aud_cont_getCourseGroups.api.spec.js:36:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getCourseGroups</div><div class="test-title">TC-003 - get Course Groups - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.493s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getCourseGroups</div><div class="test-title">TC-004 - get Course Groups - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.484s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getCourseGroups</div><div class="test-title">TC-005 - get Course Groups - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.469s</div></div></div></div></div><div id="suite-2" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\admin_findUnpublishedExercisesByProgramSessionId.api.spec.js</div><div class="suite-time">3.871s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnpublishedExercisesByProgramSessionId</div><div class="test-title">TC-001 - findUnpublishedExercisesByProgramSessionId - should return unpublished exercises by program session Id with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.637s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnpublishedExercisesByProgramSessionId</div><div class="test-title">TC-002 - findUnpublishedExercisesByProgramSessionId - should not unpublished exercises by program session Id with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.464s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnpublishedExercisesByProgramSessionId</div><div class="test-title">TC-003 - findUnpublishedExercisesByProgramSessionId - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.483s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnpublishedExercisesByProgramSessionId</div><div class="test-title">TC-004 - findUnpublishedExercisesByProgramSessionId - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.498s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_findUnpublishedExercisesByProgramSessionId</div><div class="test-title">TC-005 - findUnpublishedExercisesByProgramSessionId - should return status code 404 for access denied</div><div class="test-status">failed</div><div class="test-duration">0.541s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\admin_findUnpublishedExercisesByProgramSessionId.api.spec.js:81:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnpublishedExercisesByProgramSessionId</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">passed</div><div class="test-duration">0.563s</div></div></div></div></div><div id="suite-3" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\wsc_p_int_getAllExercises.api.spec.js</div><div class="suite-time">4.139s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-001 - All Exercises - should return all execises with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.533s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-002 - All Exercises - should not return all execises with 403 status code</div><div class="test-status">failed</div><div class="test-duration">0.51s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 403
+Received: 200
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_p_int_getAllExercises.api.spec.js:43:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-003 - All Exercises - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.512s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-004 - All Exercises - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.511s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-005 - All Exercises - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.469s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">passed</div><div class="test-duration">0.519s</div></div></div></div></div><div id="suite-4" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\wsc_int_getAllExcercises.api.spec.js</div><div class="suite-time">4.075s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-001 - All Exercises - should return all execises with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.503s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-002 - All Exercises - should not return all execises with 403 status code</div><div class="test-status">failed</div><div class="test-duration">0.51s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 403
+Received: 200
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_int_getAllExcercises.api.spec.js:43:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-003 - All Exercises - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.507s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-004 - All Exercises - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.515s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-005 - All Exercises - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.465s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">passed</div><div class="test-duration">0.511s</div></div></div></div></div><div id="suite-5" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\admin_findAllExercisesByProgramSessionId.api.spec.js</div><div class="suite-time">4.003s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findAllExercisesByProgramSessionId</div><div class="test-title">TC-001 - findAllExercisesByProgramSessionId - should find all exercises by program sessionId with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.503s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_findAllExercisesByProgramSessionId</div><div class="test-title">TC-002 - findAllExercisesByProgramSessionId - should not find all exercises by program sessionId with 403 status code</div><div class="test-status">failed</div><div class="test-duration">0.462s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 403
+Received: 404
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\admin_findAllExercisesByProgramSessionId.api.spec.js:43:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:728:3)
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findAllExercisesByProgramSessionId</div><div class="test-title">TC-003 - findAllExercisesByProgramSessionId - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.483s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findAllExercisesByProgramSessionId</div><div class="test-title">TC-004 - findAllExercisesByProgramSessionId - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.483s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findAllExercisesByProgramSessionId</div><div class="test-title">TC-005 - findAllExercisesByProgramSessionId - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.469s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findAllExercisesByProgramSessionId</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">passed</div><div class="test-duration">0.558s</div></div></div></div></div><div id="suite-6" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\admin_findUnsavedSectExercisesByProgramSessionId.api.spec.js</div><div class="suite-time">4.101s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnsavedSectExercisesByProgramSessionId</div><div class="test-title">TC-001 - findUnsavedSectExercisesByProgramSessionId - should return find unsaved sect exercises by program session Id with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.624s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnsavedSectExercisesByProgramSessionId</div><div class="test-title">TC-002 - findUnsavedSectExercisesByProgramSessionId - should not find unsaved sect exercises by program session Id with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.463s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnsavedSectExercisesByProgramSessionId</div><div class="test-title">TC-003 - findUnsavedSectExercisesByProgramSessionId - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.474s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnsavedSectExercisesByProgramSessionId</div><div class="test-title">TC-004 - findUnsavedSectExercisesByProgramSessionId - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.471s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_findUnsavedSectExercisesByProgramSessionId</div><div class="test-title">TC-005 - findUnsavedSectExercisesByProgramSessionId - should return status code 404 for access denied</div><div class="test-status">failed</div><div class="test-duration">0.474s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\admin_findUnsavedSectExercisesByProgramSessionId.api.spec.js:81:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_findUnsavedSectExercisesByProgramSessionId</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">passed</div><div class="test-duration">0.479s</div></div></div></div></div><div id="suite-7" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\sysuicont_index.api.spec.js</div><div class="suite-time">3.537s</div></div><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_Index</div><div class="test-title">TC-001 - Index - should return index with 200 status code</div><div class="test-status">failed</div><div class="test-duration">0.478s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 302
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\sysuicont_index.api.spec.js:23:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:728:3)
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_Index</div><div class="test-title">TC-002 - Index - should not return index with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.467s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_Index</div><div class="test-title">TC-003 - Index - should return correct content-type and schema in JSON format</div><div class="test-status">failed</div><div class="test-duration">0.47s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: "application/json"
+Received: "text/plain"
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\sysuicont_index.api.spec.js:50:34)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:728:3)
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_Index</div><div class="test-title">TC-004 - Index - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.467s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_Index</div><div class="test-title">TC-005 - Index - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.47s</div></div></div></div></div><div id="suite-8" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\logcont_set.api.spec.js</div><div class="suite-time">1.528s</div></div><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_Set</div><div class="test-title">TC-001 - Set - should return all set with 200 status code</div><div class="test-status">failed</div><div class="test-duration">0.472s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 403
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\logcont_set.api.spec.js:24:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:728:3)
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div></div></div><div id="suite-9" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\logcont_p_set.api.spec.js</div><div class="suite-time">1.504s</div></div><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_Set</div><div class="test-title">TC-001 - Set - should return all set with 200 status code</div><div class="test-status">failed</div><div class="test-duration">0.479s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 403
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\logcont_p_set.api.spec.js:24:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:728:3)
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div></div></div><div id="suite-10" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\logcont_loggingProvider.api.spec.js</div><div class="suite-time">1.504s</div></div><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_loggingProvider</div><div class="test-title">TC-001 - loggingProvider - should return status of logging provider with 200 status code</div><div class="test-status">failed</div><div class="test-duration">0.485s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 403
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\logcont_loggingProvider.api.spec.js:23:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:728:3)
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div></div></div><div id="suite-11" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\wsc_getAllExcercises.api.spec.js</div><div class="suite-time">4.204s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-001 - All Exercises - should return all execises with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.571s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-002 - All Exercises - should not return all execises with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.467s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-003 - All Exercises - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.508s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-004 - All Exercises - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.505s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-005 - All Exercises - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.468s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">passed</div><div class="test-duration">0.505s</div></div></div></div></div><div id="suite-12" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\wsc_p_getAllExcercises.api.spec.js</div><div class="suite-time">4.073s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-001 - All Exercises - should return all execises with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.506s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-002 - All Exercises - should not return all execises with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.462s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-003 - All Exercises - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.508s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-004 - All Exercises - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.634s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-005 - All Exercises - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.464s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllExercises</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">passed</div><div class="test-duration">0.512s</div></div></div></div></div><div id="suite-13" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\logcont_list.api.spec.js</div><div class="suite-time">4.003s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-001 - List - should return all list with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.72s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-002 - List- should not return all execises with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.467s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-003 - List - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.697s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-004 - List - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.705s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-005 - List - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.469s</div></div></div></div></div><div id="suite-14" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_saveAudienceIncludes.api.spec.js</div><div class="suite-time warn">6.679s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceIncludes</div><div class="test-title">TC-001 - saveAudienceIncludes - should save audience includes 200 status code</div><div class="test-status">passed</div><div class="test-duration">3.693s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceIncludes</div><div class="test-title">TC-002 - saveAudienceIncludes - should not save audience includes with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.466s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceIncludes</div><div class="test-title">TC-003 - saveAudienceIncludes - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.632s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceIncludes</div><div class="test-title">TC-004 - saveAudienceIncludes - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.522s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceIncludes</div><div class="test-title">TC-005 - saveAudienceIncludes - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.479s</div></div></div></div></div><div id="suite-15" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\wsc_p_getAllTeamsAndMemberByExerciseId.api.spec.js</div><div class="suite-time warn">60.222s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-001 - All Team And Member By ExerciseId - should return all team and member by exerciseId with 200 status code</div><div class="test-status">passed</div><div class="test-duration">18.937s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-002 - All Team And Member By ExerciseId - should not return all execises with 403 status code</div><div class="test-status">failed</div><div class="test-duration">6.275s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 403
+Received: 200
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_p_getAllTeamsAndMemberByExerciseId.api.spec.js:43:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-003 - All Exercises - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">9.333s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-004 - All Team And Member By ExerciseId - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">10.84s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-005 - All Team And Member By ExerciseId - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.468s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">failed</div><div class="test-duration">10.004s</div></div><div class="failureMessages"> <pre class="failureMsg">: Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: 
+    at new Spec (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Spec.js:116:22)
+    at new Spec (D:\qa_automation_api\node_modules\jest-jasmine2\build\setup_jest_globals.js:78:9)
+    at specFactory (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:523:24)
+    at Env.it (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:592:24)
+    at Env.it (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:92:25)
+    at it (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:100:21)
+    at Suite.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_p_getAllTeamsAndMemberByExerciseId.api.spec.js:87:5)
+    at addSpecsToSuite (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:444:51)
+    at Env.describe (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:414:11)
+    at describe (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:88:18)
+    at Object.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_p_getAllTeamsAndMemberByExerciseId.api.spec.js:20:1)
+    at Runtime._execModule (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:1299:24)
+    at Runtime._loadModule (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:898:12)
+    at Runtime.requireModule (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:746:10)
+    at jasmine2 (D:\qa_automation_api\node_modules\jest-jasmine2\build\index.js:230:13)
+    at runTestInternal (D:\qa_automation_api\node_modules\jest-runner\build\runTest.js:380:22)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at runTest (D:\qa_automation_api\node_modules\jest-runner\build\runTest.js:472:34)
+    at Object.worker (D:\qa_automation_api\node_modules\jest-runner\build\testWorker.js:133:12)</pre></div></div></div></div><div id="suite-16" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\wsc_getAllTeamsAndMemberByExerciseId.api.spec.js</div><div class="suite-time warn">60.422s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-001 - All Team And Member By ExerciseId - should return all team and member by exerciseId with 200 status code</div><div class="test-status">passed</div><div class="test-duration">19.03s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-002 - All Team And Member By ExerciseId - should not return all execises with 403 status code</div><div class="test-status">failed</div><div class="test-duration">10.639s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 403
+Received: 200
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_getAllTeamsAndMemberByExerciseId.api.spec.js:46:36)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-003 - All Exercises - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">4.831s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-004 - All Team And Member By ExerciseId - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">11.01s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-005 - All Team And Member By ExerciseId - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.475s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_AllTeamAndMemberByExerciseId</div><div class="test-title">TC-006 - All Exercises - validating data with database</div><div class="test-status">failed</div><div class="test-duration">10.013s</div></div><div class="failureMessages"> <pre class="failureMsg">: Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: 
+    at new Spec (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Spec.js:116:22)
+    at new Spec (D:\qa_automation_api\node_modules\jest-jasmine2\build\setup_jest_globals.js:78:9)
+    at specFactory (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:523:24)
+    at Env.it (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:592:24)
+    at Env.it (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:92:25)
+    at it (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:100:21)
+    at Suite.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_getAllTeamsAndMemberByExerciseId.api.spec.js:90:5)
+    at addSpecsToSuite (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:444:51)
+    at Env.describe (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\Env.js:414:11)
+    at describe (D:\qa_automation_api\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:88:18)
+    at Object.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_getAllTeamsAndMemberByExerciseId.api.spec.js:20:1)
+    at Runtime._execModule (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:1299:24)
+    at Runtime._loadModule (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:898:12)
+    at Runtime.requireModule (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:746:10)
+    at jasmine2 (D:\qa_automation_api\node_modules\jest-jasmine2\build\index.js:230:13)
+    at runTestInternal (D:\qa_automation_api\node_modules\jest-runner\build\runTest.js:380:22)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at runTest (D:\qa_automation_api\node_modules\jest-runner\build\runTest.js:472:34)
+    at Object.worker (D:\qa_automation_api\node_modules\jest-runner\build\testWorker.js:133:12)</pre></div></div></div></div><div id="suite-17" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\perm_cont_getOpenCourseSectionsByProgramSessionId.api.spec.js</div><div class="suite-time">3.68s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">getOpenCourseSectionsByProgramSessionId</div><div class="test-title">TC-001 - getOpenCourseSectionsByProgramSessionId - should get open course sections by program sessionId with 200 status code</div><div class="test-status">passed</div><div class="test-duration">1.432s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getOpenCourseSectionsByProgramSessionId</div><div class="test-title">TC-002 - getOpenCourseSectionsByProgramSessionId - should not get open course sections by program sessionId with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.464s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getOpenCourseSectionsByProgramSessionId</div><div class="test-title">TC-003 - getOpenCourseSectionsByProgramSessionId - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.906s</div></div></div></div></div><div id="suite-18" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\critcont_saveRules.api.spec.js</div><div class="suite-time">3.373s</div></div><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">GET_saveRules</div><div class="test-title">TC-001 - saveRules - should save rules with 200 status code</div><div class="test-status">failed</div><div class="test-duration">0.023s</div></div><div class="failureMessages"> <pre class="failureMsg">TypeError: Cannot read property 'jasmine' of null
+    at Object.setTimeout (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:1777:36)
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_p_getAllTeamsAndMemberByExerciseId.api.spec.js:80:12)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_saveRules</div><div class="test-title">TC-002 - saveRules - should not save rules with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.514s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_saveRules</div><div class="test-title">TC-003 - removePersonFromExcludesAudience - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.477s</div></div></div></div></div><div id="suite-19" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_saveAudienceExcludes.api.spec.js</div><div class="suite-time">4.379s</div></div><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">saveAudienceExcludes</div><div class="test-title">TC-001 - save Audience Excludes - should save Audience Excludes 200 status code</div><div class="test-status">failed</div><div class="test-duration">0.024s</div></div><div class="failureMessages"> <pre class="failureMsg">TypeError: Cannot read property 'jasmine' of null
+    at Object.setTimeout (D:\qa_automation_api\node_modules\jest-runtime\build\index.js:1777:36)
+    at Test.&lt;anonymous&gt; (D:\qa_automation_api\projects\tmt\testScript\wsc_getAllTeamsAndMemberByExerciseId.api.spec.js:83:12)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (D:\qa_automation_api\node_modules\supertest\lib\test.js:181:6)
+    at localAssert (D:\qa_automation_api\node_modules\supertest\lib\test.js:131:12)
+    at D:\qa_automation_api\node_modules\supertest\lib\test.js:128:5
+    at Test.Object.&lt;anonymous&gt;.Request.callback (D:\qa_automation_api\node_modules\superagent\lib\node\index.js:716:12)
+    at D:\qa_automation_api\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.&lt;anonymous&gt; (D:\qa_automation_api\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceExcludes</div><div class="test-title">TC-002 - save Audience Excludes - should not save Audience Excludes with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.492s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceExcludes</div><div class="test-title">TC-003 - save Audience Excludes - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.52s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceExcludes</div><div class="test-title">TC-004 - save Audience Excludes - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.62s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">saveAudienceExcludes</div><div class="test-title">TC-005 - save Audience Excludes - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.466s</div></div></div></div></div><div id="suite-20" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\logcont_reload.api.spec.js</div><div class="suite-time">3.748s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-001 - Reload - should return all reloaded list with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.493s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-002 - Reload- should not return all reloaded list with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.463s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-003 - Reload - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.491s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-004 - Reload - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.468s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_List</div><div class="test-title">TC-005 - Reload - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.47s</div></div></div></div></div><div id="suite-21" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\permcont_isCourseLevelAdmin.api.spec.js</div><div class="suite-time">3.453s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isCourseLevelAdmin</div><div class="test-title">TC-001 - isCourseLevelAdmin - should return is course level admin with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.524s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isCourseLevelAdmin</div><div class="test-title">TC-002 - isCourseLevelAdmin - should not is course level admin with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.468s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isCourseLevelAdmin</div><div class="test-title">TC-003 - isCourseLevelAdmin - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.468s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isCourseLevelAdmin</div><div class="test-title">TC-004 - isCourseLevelAdmin - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.463s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isCourseLevelAdmin</div><div class="test-title">TC-005 - isCourseLevelAdmin - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.469s</div></div></div></div></div><div id="suite-22" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_addGroupToAudienceList.api.spec.js</div><div class="suite-time">2.635s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudienceList</div><div class="test-title">TC-001 - addGroupToAudienceList - should add group to audience list with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.65s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudienceList</div><div class="test-title">TC-002 - addGroupToAudienceList - should not add group to audience list  with 200 with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.463s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudienceList</div><div class="test-title">TC-003 - addGroupToAudienceList - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.509s</div></div></div></div></div><div id="suite-23" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\permcont_isSectAdmin.api.spec.js</div><div class="suite-time">3.608s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isSectAdmin</div><div class="test-title">TC-001 - isSectAdmin - should return is sect admin with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.524s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isSectAdmin</div><div class="test-title">TC-002 - isSectAdmin - should not is course level admin with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.463s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isSectAdmin</div><div class="test-title">TC-003 - isSectAdmin - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.464s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isSectAdmin</div><div class="test-title">TC-004 - isSectAdmin - should return the response in sepecified time</div><div class="test-status">passed</div><div class="test-duration">0.466s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">GET_isSectAdmin</div><div class="test-title">TC-005 - isSectAdmin - should return status code 404 for access denied</div><div class="test-status">passed</div><div class="test-duration">0.472s</div></div></div></div></div><div id="suite-24" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_addGroupToAudience.api.spec.js</div><div class="suite-time">2.635s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudience</div><div class="test-title">TC-001 - addGroupToAudience - should add group to audience  with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.527s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudience</div><div class="test-title">TC-002 - addGroupToAudience - should not add group to audience  with 200 with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.475s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudience</div><div class="test-title">TC-003 - addGroupToAudience - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.554s</div></div></div></div></div><div id="suite-25" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_removeGroupFromAudience.api.spec.js</div><div class="suite-time">2.733s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">removeGroupFromAudience</div><div class="test-title">TC-001 - removeGroupFromAudience - should add group to audience  with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.678s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">removeGroupFromAudience</div><div class="test-title">TC-002 - removeGroupFromAudience - should not add group to audience with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.465s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">removeGroupFromAudience</div><div class="test-title">TC-003 - removeGroupFromAudience - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.504s</div></div></div></div></div><div id="suite-26" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_p_addGroupToAudienceList.api.spec.js</div><div class="suite-time">2.61s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudienceList</div><div class="test-title">TC-001 - addGroupToAudienceList - should add group to audience list with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.518s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudienceList</div><div class="test-title">TC-002 - addGroupToAudienceList - should not add group to audience list  with 200 with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.465s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">addGroupToAudienceList</div><div class="test-title">TC-003 - addGroupToAudienceList - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.525s</div></div></div></div></div><div id="suite-27" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_removePersonFromExcludesAudience.api.spec.js</div><div class="suite-time">2.713s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">removePersonFromExcludesAudience</div><div class="test-title">TC-001 - removePersonFromExcludesAudience - should remove person from excludes audience  with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.587s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">removePersonFromExcludesAudience</div><div class="test-title">TC-002 - removePersonFromExcludesAudience - should not remove person from excludes audience with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.483s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">removePersonFromExcludesAudience</div><div class="test-title">TC-003 - removePersonFromExcludesAudience - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.495s</div></div></div></div></div><div id="suite-28" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_removePersonFromIncludesAudience.api.spec.js</div><div class="suite-time">2.736s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">removePersonFromIncludesAudience</div><div class="test-title">TC-001 - removePersonFromIncludesAudience - should remove person from includes audience  with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.597s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">removePersonFromIncludesAudience</div><div class="test-title">TC-002 - removePersonFromExcludesAudience - should not remove person from includes audience with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.467s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">removePersonFromIncludesAudience</div><div class="test-title">TC-003 - removePersonFromIncludesAudience - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.506s</div></div></div></div></div><div id="suite-29" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_getAudienceIncludes.api.spec.js</div><div class="suite-time">2.63s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">getAudienceIncludes</div><div class="test-title">TC-001 - getAudienceIncludes - should get audience excludes  with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.486s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getAudienceIncludes</div><div class="test-title">TC-002 - getAudienceExcludes - should not get audience excludes with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.47s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getAudienceIncludes</div><div class="test-title">TC-003 - getAudienceIncludes - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.475s</div></div></div></div></div><div id="suite-30" class="suite-container"><div class="suite-info"><div class="suite-path">D:\qa_automation_api\projects\tmt\testScript\aud_cont_getAudienceExcludes.api.spec.js</div><div class="suite-time">2.716s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">getAudienceExcludes</div><div class="test-title">TC-001 - getAudienceExcludes - should get audience excludes  with 200 status code</div><div class="test-status">passed</div><div class="test-duration">0.496s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getAudienceExcludes</div><div class="test-title">TC-002 - getAudienceExcludes - should not get audience excludes with 403 status code</div><div class="test-status">passed</div><div class="test-duration">0.463s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">getAudienceExcludes</div><div class="test-title">TC-003 - getAudienceExcludes - should return correct content-type and schema in JSON format</div><div class="test-status">passed</div><div class="test-duration">0.468s</div></div></div></div></div></div></body></html>
